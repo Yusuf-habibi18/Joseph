@@ -47,10 +47,40 @@ p {
     position: relative;
     line-height: 1.6;
     color:darkslategray;
+   
 }
+
 .logo {
     height: 90px;
     vertical-align: middle;
+}
+
+.menu-img,
+.menu-img-left {
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    margin: 0 20px 10px 0;
+    border-radius: 8px;
+}
+
+.menu-img {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.menu-img-left {
+    float: left;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.full-img {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 .menu-img,
 .menu-img-left {
@@ -98,14 +128,13 @@ p {
 .clearfixdrink {
     animation: swapRight 3s 1;
 }
-
-
 .clearfixfood::after,
 .clearfixdrink::after {
     content: "";
     display: table;
     clear: both;
 }
+
 @keyframes slide {
     from { bottom: -20px; }
     to { bottom: 0px; }
