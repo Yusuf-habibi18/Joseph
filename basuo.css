@@ -1,0 +1,158 @@
+/* ====== GENERAL STYLING ====== */
+body{
+    background-color:darkslategray;
+
+}
+b{
+    color:bisque;
+    position:relative;
+    animation:slide 1s 1;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    color:bisque;
+    position: relative;
+    animation: swap 1s 1;
+}
+
+form {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: xx-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    margin-top: 40px;
+    position: relative;
+    color: darkslategray;
+}
+
+p {
+    text-align: justify;
+    font-size:large;
+    font-family:serif;
+    font-style: oblique;
+    position: relative;
+    line-height: 1.6;
+    color:darkslategray;
+   
+}
+
+/* ====== LOGO ====== */
+.logo {
+    height: 90px;
+    vertical-align: middle;
+}
+
+/* ====== IMAGE STYLING ====== */
+.menu-img,
+.menu-img-left {
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    margin: 0 20px 10px 0;
+    border-radius: 8px;
+}
+
+.menu-img {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.menu-img-left {
+    float: left;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.full-img {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.menu-img,
+.menu-img-left {
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    margin: 0 20px 10px 0;
+    border-radius: 8px;
+}
+
+.menu-img {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.menu-img-left {
+    float: left;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.full-img {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 10px;
+
+}
+
+/* ====== CARD STYLING ====== */
+
+.clearfixfood,.clearfixdrink {
+    background-color:bisque;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(16, 16, 16, 0.1);
+    position: relative;
+    overflow: hidden; /* biar float img tetap di dalam box */
+}
+
+.clearfixfood {
+    animation: swapLeft 3s 1;
+    
+}
+
+.clearfixdrink {
+    animation: swapRight 3s 1;
+}
+
+/* ====== FLOAT CLEAR FIX ====== */
+.clearfixfood::after,
+.clearfixdrink::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes slide {
+    from { bottom: -20px; }
+    to { bottom: 0px; }
+}
+
+@keyframes swapLeft {
+    from { left: -50px; opacity: 0; }
+    to { left: 0px; opacity: 1; }
+}
+
+@keyframes swapRight {
+    from { right: -50px; opacity: 0; }
+    to { right: 0px; opacity: 1; }
+}
+
+@keyframes swap {
+    from { left: -50px; opacity: 0; }
+    to { left: 0px; opacity: 1; }
+}
