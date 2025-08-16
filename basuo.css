@@ -112,6 +112,7 @@ p {
 .clearfixfood,.clearfixdrink {
     background-color:bisque;
     padding: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(16, 16, 16, 0.1);
