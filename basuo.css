@@ -78,38 +78,25 @@ p {
     margin: 10px 0;
     border-radius: 10px;
 }
-.menu-img,
-.menu-img-left {
-    height: 250px;
-    width: auto;
-    object-fit: cover;
-    margin: 0 20px 10px 0;
-    border-radius: 8px;
+.foto{
+    position: relative;
+    overflow: hidden;
+    animation: swapRight 3s 1;
 }
-
-.menu-img {
-    float: right;
-    margin-left: 20px;
-    margin-right: 0;
+.container{
+    display: flex;        /* bikin sejajar ke samping */
+    justify-content: center; /* biar rata tengah */
+    position: relative;
+    overflow: hidden;
+    animation: swapLeft 3s 1;
 }
-
-.menu-img-left {
-    float: left;
-    margin-right: 20px;
-    margin-left: 0;
-}
-
-.full-img {
-    width: 100%;
-    display: block;
-    margin: 10px 0;
-    border-radius: 10px;
-
-}
-
+.foto1 {animation: swapLeft 3s 1; }
+.foto2 {animation: swapRight 3s 1; }
+.foto3 {animation: slide 3s 1; }
 /* ====== CARD STYLING ====== */
 
-.clearfixfood,.clearfixdrink {
+.clearfixfood,
+.clearfixdrink{
     background-color:bisque;
     padding: 20px;
     margin-top: 30px;
@@ -131,7 +118,8 @@ p {
 
 /* ====== FLOAT CLEAR FIX ====== */
 .clearfixfood::after,
-.clearfixdrink::after {
+.clearfixdrink::after, 
+.foto::after {
     content: "";
     display: table;
     clear: both;
@@ -156,4 +144,23 @@ p {
 @keyframes swap {
     from { left: -50px; opacity: 0; }
     to { left: 0px; opacity: 1; }
+}
+/* DESKTOP DEFAULT */
+.menu-img { float: right; width: auto; height: 250px; }
+.menu-img-left { float: left; width: auto; height: 250px; }
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    .menu-img,
+    .menu-img-left {
+        float: none;       /* hapus float */
+        display: block;    /* gambar jadi blok */
+        margin: 10px auto; /* tengah horizontal */
+        width: 90%;        /* lebar menyesuaikan layar */
+        height: auto;      /* proporsional */
+    }
+    
+    h2 { text-align: center; font-size: x-large; }
+    p { font-size: medium; padding: 0 10px; }
+    .clearfixfood, .clearfixdrink { margin: 20px 5px; padding: 15px; }
 }
